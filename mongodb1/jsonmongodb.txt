@@ -1,0 +1,418 @@
+collection classroom:[{
+   "name": "Packard",
+   "num": 101,
+   "capacity": 500
+},
+{
+   "name": "Painter",
+   "num": 504,
+   "capacity": 1	
+},
+{
+   "name": "Taylor",
+   "num": 3128,
+   "capacity": 70	
+},
+{
+   "name": "Watson",
+   "num": 100,
+   "capacity": 30	
+},
+{
+   "name": "Watson",
+   "num": 120,
+   "capacity": 50	
+}]
+
+collection student:[{
+   "name": "Zhang",
+   "dept_name": "Comp. Sci",
+   "tot_cred": 102	
+},
+{
+   "name": "Shankar",
+   "dept_name": "Comp. Sci",
+   "tot_cred": 32	
+},
+{
+   "name": "Brandt",
+   "dept_name": "History",
+   "tot_cred": 80	
+},
+{
+   "name": "Chavez",
+   "dept_name": "Finance",
+   "tot_cred": 110	
+},
+{
+   "name": "Peltier",
+   "dept_name": "Physics",
+   "tot_cred": 56	
+},
+{
+   "name": "Levy",
+   "dept_name": "Physics",
+   "tot_cred": 46	
+},
+{
+   "name": "Williams",
+   "dept_name": "Comp. Sci",
+   "tot_cred": 54	
+},
+{
+   "name": "Sanchez",
+   "dept_name": "Music",
+   "tot_cred": 38	
+},
+{
+   "name": "Snow",
+   "dept_name": "Physics",
+   "tot_cred": 0	
+},
+{
+   "name": "Brown",
+   "dept_name": "Comp. Sci",
+   "tot_cred": 58	
+},
+{
+   "name": "Aoi",
+   "dept_name": "Elec. Eng.",
+   "tot_cred": 60	
+},
+{
+   "name": "Bourikas",
+   "dept_name": "Elec. Eng.",
+   "tot_cred": 98	
+},
+{
+   "name": "Tanaka",
+   "dept_name": "Biology",
+   "tot_cred": 120	
+}]
+
+done 'Katz': 'Zhang','Brown' -> 6621b810da2ac8848438cd13 , 6621b810da2ac8848438cd1c
+done 'Srinivasan': 'Shankar'-> 6621b810da2ac8848438cd14
+done 'Singh' : 'Chavez' -> 6621b810da2ac8848438cd16
+done 'Einstein': 'Peltier','Levy' -> 6621b810da2ac8848438cd17 , 6621b810da2ac8848438cd18
+done 'Kim': 'Aoi', 'Bourikas' -> 6621b810da2ac8848438cd1d , 6621b810da2ac8848438cd1e
+done 'Crick': 'Tanaka' -> 6621b810da2ac8848438cd1f
+
+collection teachers[
+{
+   "name": "Srinivasan",
+   "dept_name": "Comp. Sci.",
+   "salary": 65000,
+   "orientandos": [ "6621b810da2ac8848438cd14" ]
+},
+{
+   "name": "Wu",  
+   "dept_name": "Finance",
+   "salary": 90000,
+   "orientandos": [ ]
+},
+{
+   "name": "Mozart",   
+   "dept_name": "Music",
+   "salary": 40000,
+   "orientandos": [ ]
+},
+{
+   "name": "Einstein",   
+   "dept_name": "Physics",
+   "salary": 95000,
+   "orientandos": [ "6621b810da2ac8848438cd17", "6621b810da2ac8848438cd18" ]
+},
+{
+   "name": "El Said",   
+   "dept_name": "History",
+   "salary": 6000,
+   "orientandos": [ ]
+},
+{
+   "name": "Gold",   
+   "dept_name": "Physics",
+   "salary": 87000,
+   "orientandos": [ ]
+},
+{
+   "name": "Katz",   
+   "dept_name": "Comp. Sci.",
+   "salary": 75000,
+   "orientandos": [ "6621b810da2ac8848438cd13", "6621b810da2ac8848438cd1c" ]
+},
+{
+   "name": "Califieri",   
+   "dept_name": "History",
+   "salary": 62000,
+   "orientandos": [ ]
+},
+{
+   "name": "Singh",   
+   "dept_name": "Finance",
+   "salary": 80000,
+   "orientandos": [ "6621b810da2ac8848438cd16" ]
+},
+{
+   "name": "Crick",
+   "dept_name": "Biology",
+   "salary": 72000,
+   "orientandos": [ "6621b810da2ac8848438cd1f" ]
+},
+{
+   "name": "Brandt",   
+   "dept_name": "Comp. Sci.",
+   "salary": 92000,
+   "orientandos": [ ]
+},
+{
+   "name": "Kim",   
+   "dept_name": "Elec. Eng.",
+   "salary": 80000,
+   "orientandos": [ "6621b810da2ac8848438cd1d", "6621b810da2ac8848438cd1e" ]
+}
+]
+
+
+collection course[
+{
+    "credits": 4,
+    "deptname": "Biology"
+    "title": "Intro. to Biology"
+    "alunosid":[ "6621b810da2ac8848438cd1f" ]
+    "prereq_id":[]
+},
+{
+    "credits": 4,
+    "deptname": "Biology"
+    "title": "Genetics"
+    "alunosid":[ "6621b810da2ac8848438cd1f" ]
+    "prereq_id":[ "66267bd5da2ac8848405bbc2"]
+},
+{
+    "credits": 3,
+    "deptname": "Biology"
+    "title": "Computational Biology"
+    "alunosid":[  ]
+    "prereq_id":[ "66267bd5da2ac8848405bbc2"]
+},
+{
+    "credits": 4,
+    "deptname": "Comp. Sci."
+    "title": "Intro. to Computer Science"
+    "alunosid":[ "6621b810da2ac8848438cd13", "6621b810da2ac8848438cd14", "6621b810da2ac8848438cd18", "6621b810da2ac8848438cd19", "6621b810da2ac8848438cd1c", "6621b810da2ac8848438cd1e" ]
+    "prereq_id":[]
+},
+{
+    "credits": 4,
+    "deptname": "Comp. Sci."
+    "title": "Game Design"
+    "alunosid":[ "6621b810da2ac8848438cd19", "6621b810da2ac8848438cd14" ]
+    "prereq_id":[]
+},
+{
+    "credits": 3,
+    "deptname": "Comp. Sci."
+    "title": "Robotics"
+    "alunosid":[ "6621b810da2ac8848438cd14", "6621b810da2ac8848438cd1e" ]
+    "prereq_id":[] 
+},
+{
+    "credits": 3,
+    "deptname": "Comp. Sci."
+    "title": "Image Processing"
+    "alunosid":[ "6621b810da2ac8848438cd18", "6621b810da2ac8848438cd1c" ]
+    "prereq_id":[]
+},
+{
+    "credits": 3,
+    "deptname": "Comp. Sci."
+    "title": "Database System Concepts"
+    "alunosid":[ "6621b810da2ac8848438cd14", "6621b810da2ac8848438cd13" ]
+    "prereq_id":[] 
+},
+{
+    "credits": 3,
+    "deptname": "Elec. Eng."
+    "title": "Intro. to Digital Systems"
+    "alunosid":[ "6621b810da2ac8848438cd1d" ]
+    "prereq_id":[] 
+},
+{
+    "credits": 3,
+    "deptname": "Finance"
+    "title": "Investment Banking"
+    "alunosid":[ "6621b810da2ac8848438cd16" ]
+    "prereq_id":[] 
+},
+{
+    "credits": 3,
+    "deptname": "History"
+    "title": "World History"
+    "alunosid":[ "6621b810da2ac8848438cd15" ]
+    "prereq_id":[] 
+},
+{
+    "credits": 3,
+    "deptname": "Music"
+    "title": "Music Video Production"
+    "alunosid":[ "6621b810da2ac8848438cd1a" ]
+    "prereq_id":[] 
+},
+{
+    "credits": 4,
+    "deptname": "Physics"
+    "title": "Physical Principles"
+    "alunosid":[ "6621b810da2ac8848438cd17" ]
+    "prereq_id":[] 
+}
+]
+
+department:[
+{
+   "dept_name": "Biology",
+   "budget": 90000,
+   "building": "Watson",
+   "courseid":[ "66267bd5da2ac8848405bbc2" , "66267bd5da2ac8848405bbc3", "66267bd5da2ac8848405bbc4"] 
+},
+{
+   "dept_name": "Comp. Sci.",
+   "budget": 100000,
+   "building": "Taylor",
+   "courseid":[ "66267bd5da2ac8848405bbc5", "66267bd5da2ac8848405bbc6", "66267bd5da2ac8848405bbc7", "66267bd5da2ac8848405bbc8", "66267bd5da2ac8848405bbc9"] 
+},
+{ 
+   "dept_name": "Elec. Eng.",
+   "budget": 85000,
+   "building": "Taylor",
+   "courseid":[ "66267bd5da2ac8848405bbca" ] 
+},
+{ 
+   "dept_name": "Finance",
+   "budget": 120000,
+   "building": "Painter",
+   "courseid":[ "66267bd5da2ac8848405bbcb"] 
+},
+{ 
+   "dept_name": "History",
+   "budget": 50000,
+   "building": "Painter",
+   "courseid":[ "66267bd5da2ac8848405bbcc" ] 
+},
+{
+   "dept_name": "Music",
+   "budget": 80000,
+   "building": "Packard",
+   "courseid":[ "66267bd5da2ac8848405bbcd"] 
+},
+{ 
+   "dept_name": "Physics",
+   "budget": 70000,
+   "building": "Watson",
+   "courseid":[ "66267bd5da2ac8848405bbce"] 
+},
+]
+ 
+
+collection.section 
+[
+  {
+    "semester": "Fall",
+    "year": 2017,
+    "classcourse": [
+      {
+        "course_id": "66267bd5da2ac8848405bbc9",
+        "class_id": "6621af7ada2ac88484325f0a",
+        "prof_id": "662667c9da2ac88484f7c5bd"
+      },
+      {
+        "course_id": "66267bd5da2ac8848405bbc5",
+        "class_id": "6621af57da2ac8848432266c",
+        "prof_id": "662667c9da2ac88484f7c5bd"
+      },
+      {
+        "course_id": "66267bd5da2ac8848405bbce",
+        "class_id": "6621af7ada2ac88484325f0b",
+        "prof_id": "662667c9da2ac88484f7c5c0"
+      }
+    ]
+  },
+  {
+    "semester": "Spring",
+    "year": 2017,
+    "classcourse": [
+      {
+        "course_id": "66267bd5da2ac8848405bbc6",
+        "class_id": "6621af7ada2ac88484325f0a",
+        "prof_id": "662667c9da2ac88484f7c5c7"
+      },
+      {
+        "course_id": "66267bd5da2ac8848405bbca",
+        "class_id": "6621af7ada2ac88484325f0a",
+        "prof_id": "662667c9da2ac88484f7c5c8"
+      }
+    ]
+  },
+  {
+    "semester": "Spring",
+    "year": 2018,
+    "classcourse": [
+      {
+        "course_id": "66267bd5da2ac8848405bbc8",
+        "class_id": "6621af7ada2ac88484325f0b",
+        "prof_id": "662667c9da2ac88484f7c5c3"
+      },
+      {
+        "course_id": "66267bd5da2ac8848405bbc8",
+        "class_id": "6621af7ada2ac88484325f0a",
+        "prof_id": "662667c9da2ac88484f7c5c7"
+      },
+      {
+        "course_id": "66267bd5da2ac8848405bbc5",
+        "class_id": "6621af57da2ac8848432266c",
+        "prof_id": "662667c9da2ac88484f7c5c3"
+      },
+      {
+        "course_id": "66267bd5da2ac8848405bbcb",
+        "class_id": "6621af57da2ac8848432266c",
+        "prof_id": "662667c9da2ac88484f7c5be"
+      },
+      {
+        "course_id": "66267bd5da2ac8848405bbcd",
+        "class_id": "6621af57da2ac8848432266c",
+        "prof_id": "662667c9da2ac88484f7c5bf"
+      },
+      {
+        "course_id": "66267bd5da2ac8848405bbc7",
+        "class_id": "6621af7ada2ac88484325f0c",
+        "prof_id": "662667c9da2ac88484f7c5bd"
+      },
+      {
+        "course_id": "66267bd5da2ac8848405bbcc",
+        "class_id": "6621af57da2ac8848432266d",
+        "prof_id": "662667c9da2ac88484f7c5c1"
+      }
+    ]
+  },
+  {
+    "semester": "Summer",
+    "year": 2017,
+    "classcourse": [
+      {
+        "course_id": "66267bd5da2ac8848405bbc2",
+        "class_id": "6621af57da2ac8848432266d",
+        "prof_id": "662667c9da2ac88484f7c5c6"
+      }
+    ]
+  },
+  {
+    "semester": "Summer",
+    "year": 2018,
+    "classcourse": [
+      {
+        "course_id": "66267bd5da2ac8848405bbc3",
+        "class_id": "6621af57da2ac8848432266d",
+        "prof_id": "662667c9da2ac88484f7c5c6"
+      }
+    ]
+  }
+]

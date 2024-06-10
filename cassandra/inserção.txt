@@ -1,0 +1,152 @@
+
+1. Listar todos os cursos oferecidos por um determinado departamento
+
+q1 = """select d.dept_name, d.building, d.budget, c.course_id, c.title from bd2.department d inner join bd2.course c on d.dept_name = c.dept_name;"""
+
+values = f"insert into default_keyspace.department(dept_name, building, budget, courseid, ctitle, credits) values ('{i[0]}', '{i[1]}', '{i[2]}', '{i[3]}', '{i[4]}', '{i[5]}');"
+
+session.execute(f"drop table default_keyspace.{cass};")
+		session.execute("""create table default_keyspace.department(
+	dept_name		text, 
+	 building		text, 
+	 budget		    int,
+     curso_id   text,
+	 ctitle 	text,
+	 primary key ((dept_name), curso_id)
+);""")
+
+create table default_keyspace.department(
+	dept_name		text, 
+	 building		text, 
+	 budget		    text,
+     curso_id   text,
+	 ctitle 	text,
+	 primary key ((dept_name), curso_id)
+);
+
+2. Recuperar todas as disciplinas de um curso específico em um determinado semestre
+
+q2 = """Select distinct c.course_id, c.title, c.dept_name, s.semester , s.year , cl.building, cl.room_number, i.name from bd2.section s
+left join bd2.teaches t on t.sec_id = s.sec_id and t.semester = s.semester and t.year = s.year and s.course_id = t.course_id
+left join bd2.course c on c.course_id = s.course_id
+left join bd2.instructor i on i.ID = t.ID
+inner join bd2.classroom cl on cl.room_number = s.room_number
+order by s.semester, s.year """
+
+
+create table default_keyspace.section
+	(course_id		text, 
+	 course_title 	text,
+	 dept_name 		text,
+	 semester		text,
+	 year			int, 
+	 building		text,
+	 room_number	int,
+	 prof_name 		text,
+	 primary key ((course_id), sec_id, semester, year)
+	);
+
+3. Encontrar todos os estudantes que estão matriculados em um curso específico
+
+Select t.course_id , c.title, c.credits , s.name from bd2.student s
+left join bd2.takes t on t.id = s.id
+left join bd2.course c on c.course_id = t.course_id
+where t.course_id is not NULL
+
+create table default_keyspace.studdentcourse
+	(course_id		text, 
+	 title			text,
+	 credits		int,
+	 name 			text,
+	 primary key (course_id)
+);
+
+4. Listar a média de salários de todos os professores em um determinado departamento
+
+select i.id, i.name, i.dept_name, i.salary, s.name from bd2.instructor i
+left join bd2.advisor a on a.i_id = i.id
+left join bd2.student s on s.id = a.s_id
+
+
+create table default_keyspace.instructor
+	(ID 			text,
+	 name			text, 
+	 dept_name		text, 
+	 salary			int,
+	 orienta 		text,
+	 primary key (ID)
+	);
+
+5. Recuperar o número total de créditos obtidos por um estudante específico
+
+select s.id, s.name, s.dept_name, s.tot_cred from bd2.student s
+
+create table default_keyspace.student
+	(ID			text, 
+	 name			text, 
+	 dept_name		text, 
+	 tot_cred		int,
+	 primary key (ID)
+	)
+
+6. Encontrar todas as disciplinas ministradas por um professor em um semestre específico
+
+
+
+create table default_keyspace.section
+	(course_id		text, 
+     sec_id			text,
+	 semester		text,
+	 year			int, 
+	 building		text,
+	 room_name		text,
+	 prof_name 		text,
+	 time_slot_id		text,
+	 primary key (course_id, sec_id, semester, year)
+	);
+
+7. Listar todos os estudantes que têm um determinado professor como orientador
+
+create table default_keyspace.instructor
+	(ID 			text,
+	 name			text, 
+	 dept_name		text, 
+	 salary			int,
+	 orienta 		text,
+	 primary key (ID)
+	);
+
+8. Recuperar todas as salas de aula sem um curso associado
+
+select c.building, c.room_number, c.capacity from bd2.classroom c
+
+create table default_keyspace.classroom
+	(building		text,
+	 room_number	text,
+	 capacity		int,
+	 primary key (building, room_number)
+	);
+
+9. Encontrar todos os pré-requisitos de um curso específico
+
+select c.course_id, c.title, c.credits, p.prereq_id from bd2.course c
+left join bd2.prereq p on p.course_id = c.course_id
+
+create table bd2.course
+	(course_id		text, 
+	 title			text, 
+	 credits		int,
+	 prereq_id 		text,
+	 primary key (course_id),
+	);
+
+10. Recuperar a quantidade de alunos orientados por cada professor
+
+create table default_keyspace.instructor
+	(ID 			text,
+	 name			text, 
+	 dept_name		text, 
+	 salary			int,
+	 orienta 		text,
+	 primary key (ID)
+	);

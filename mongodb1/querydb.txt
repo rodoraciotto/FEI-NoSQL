@@ -1,0 +1,129 @@
+1 Listar todos os cursos oferecidos por um determinado departamento
+
+departamento:{
+    course:[]
+    budget
+    building
+}
+
+R: 
+
+2 Recuperar todas as disciplinas de um curso específico em um determinado semestre
+
+section{
+    ano:
+    
+    class_course:[{ 
+        course_id:
+        class_id:    
+    }]
+    
+}
+
+3 Encontrar todos os estudantes que estão matriculados em um curso específico
+
+curso{
+    alunos:[]
+}
+
+4 Listar a média de salários de todos os professores em um determinado departamento
+
+depart{
+    Professor{
+        salário:
+    }
+}
+
+5 Recuperar o número total de créditos obtidos por um estudante específico
+
+estudante{
+    totalcredit
+}
+
+6 Encontrar todas as disciplinas ministradas por um professor em um semestre específico
+
+semestre{
+    professorid:[
+	disciplinas:[]    
+    ]
+}
+
+7 Listar todos os estudantes que têm um determinado professor como orientador
+
+professor{
+    orientandos:[]
+}
+
+
+8 Recuperar todas as salas de aula sem um curso associado
+
+Classroom:{
+     course:
+}
+
+9 Encontrar todos os pré-requisitos de um curso específico
+
+curso:{
+    prerq:[]
+}
+
+10 Recuperar a quantidade de alunos orientados por cada professor
+
+professor{
+    orientandos:[]
+}
+
+
+como fica:
+
+classroom{
+    class_id:
+    building:
+    room_number:
+    capacity:
+}
+
+student{
+    name:
+    aluno_id:
+    dept_name:
+    tot_credit:
+}
+professor{
+    prof_id:
+    salario
+    name
+    alunosid:[]
+}
+course{
+    course_id:
+    credits
+    deptname
+    title
+    alunosid:[]
+    prereq_id:[](courseid)
+}
+
+department:{
+    dept_name:
+    dept_id:
+    courseid:[]
+    budget
+    building    
+}
+
+section{
+    semester:
+    year:
+    class_course:[{ 
+        course_id:
+        class_id:
+        prof_id:
+    }]
+}
+
+
+
+
+
+
